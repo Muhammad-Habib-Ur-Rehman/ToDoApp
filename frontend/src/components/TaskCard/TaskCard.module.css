@@ -1,0 +1,152 @@
+.card {
+  position: relative;
+  background: #fefefe;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+.priority {
+  font-size: 13px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+}
+
+/* Priority Colors */
+.high {
+  background-color: #e74c3c; /* red */
+}
+
+.medium {
+  background-color: #f39c12;  /* orange */
+}
+
+.low {
+  background-color: #2ecc71; /* green */
+}
+
+.withMarkBtn {
+  padding-left: 140px;
+}
+
+.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.priority {
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.description {
+  margin: 6px 0;
+  color: #333;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.attachmentTitle {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-top: 10px;
+  gap: 6px;
+  color: #444;
+}
+
+.attachmentList {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+.attachmentIconOnly {
+  font-size: 22px;
+  text-decoration: none;
+  color: #444;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.attachmentIconOnly:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.actions button:hover {
+  color: #007bff;
+}
+
+.markCompleteBtn {
+  position: absolute;
+  left: 10px;
+  top: 82%;
+  transform: translateY(-50%);
+  background-color: #005f73;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.markCompleteBtn:hover {
+  background-color: #c9302c;
+}
+.sharedBy {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}

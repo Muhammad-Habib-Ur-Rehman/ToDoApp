@@ -1,0 +1,132 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #005f73;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logoImg {
+  height: 50px;
+  width: auto;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.namebox {
+  color: #0a0908;
+  background: #e0fbfc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.menuIcon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.line {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.activeLine1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.activeLine2 {
+  opacity: 0;
+}
+.activeLine3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.navMenu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+.link {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-bottom 0.3s;
+  padding-bottom: 2px;
+}
+
+.link:hover {
+  border-bottom: 2px solid #94d2bd;
+}
+
+.logoutBtn {
+  background-color: #ee9b00;
+  color: white;
+  font-size: 15px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background-color: #ca6702;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: flex;
+  }
+
+  .navMenu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 65px);
+    flex-direction: column;
+    align-items: center;
+    background-color: #005f73;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding-top: 40px;
+  }
+
+  .navMenuActive {
+    transform: translateX(0);
+  }
+
+  .navMenu li {
+    margin: 20px 0;
+  }
+
+  .namebox {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-left: 12px;
+  }
+
+  .logoImg {
+    height: 40px;
+  }
+}

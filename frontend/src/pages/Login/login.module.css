@@ -1,0 +1,187 @@
+
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .page 
+    {
+      display: flex; 
+      justify-content: space-between;
+      margin-top: 80px; 
+      padding: 40px 40px 100px 40px;
+    }
+
+    .container{
+      background-color: #ffffff;
+      width: 80vw;
+      padding: 20px; 
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      margin: 0;
+    }
+
+    .container h1 {
+      margin-bottom: 20px; 
+      font-size: 24px;
+      color: #005f73;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; 
+    }
+
+    input {
+      width: 100%;
+      font-size: 16px; 
+      padding: 13px; 
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #005f73;
+    }
+
+    input::placeholder {
+      font-size: 13px;
+      font-style: italic;
+      color: #999;
+    }
+
+    .submitButton {
+      background-color: #005f73;
+      color: white;
+      font-size: 16px; 
+      padding: 10px; 
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submitButton:hover {
+      background-color: #004350;;
+    }
+
+    .bottomhead{
+      font-size: 16px;
+      color: #555;
+      text-align: center;
+      margin-top: 10px; 
+    }
+
+    span a {
+      color: #002850 !important;
+      text-decoration: none ;
+      font-weight: 500;
+    }
+
+
+    @media (min-width: 1200px) {
+      .page {
+        flex-direction: row;
+      }
+
+      .container {
+        width: 32%; 
+      }
+    }
+
+    @media (max-width: 1200px) and (min-width: 768px) {
+      .page {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .container {
+        width: 80%;
+      }
+
+      form {
+        gap: 15px;
+      }
+
+      input, button {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page {
+        flex-direction: column; 
+        margin-top: 80px; 
+      }
+
+      .container {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      input, button {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+
+      .container h1 {
+        font-size: 20px;
+      }
+
+      form {
+        gap: 12px;
+      }
+
+      input, button {
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+    .inputError {
+      border: 1px solid red;
+    }

@@ -1,0 +1,231 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #005f73;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto; /* vertical scroll */
+  overflow-x: hidden;
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #005f73;
+}
+.themeToggle {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* The circle inside the slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.themeToggle span{
+  color:white
+}
+
+/* When checked */
+.switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #005f73;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.sidebar.open {
+  left: 0;
+  width: 200px; /* Default for desktop */
+}
+
+@media (max-width: 767px) {
+  .sidebar.open {
+    width: 100%;
+    background-color: #005f73;
+    padding-top: 60px;
+  }
+  .menuItem {
+    width: 80%; 
+  }
+}
+
+.sidebarHeader {
+  font-size: 24px;
+  margin-bottom: 22px;
+  margin-top: 26px;
+  font-weight: bolder;
+}
+
+.userInfo {
+  margin-bottom: 20px;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  font-size: 27px;
+}
+
+.menuItem {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px;
+  background: #eaeaea;
+  color: #005f73;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.menuItem:hover {
+  background: #cccccc;
+}
+
+.hamburger {
+  position: fixed;
+  top: 35px;
+  left: 20px;
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10000; 
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.hamburger div {
+  width: 80%;
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: white;
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0; 
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6.5px); 
+  background-color: white;
+}
+
+.hamburger:hover div {
+  background-color: #f1f1f1; 
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+    background-color: transparent;
+  }
+
+  .sidebar {
+    left: 0;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .sidebar.open {
+    width: 100vw;
+    background-color: #005f73;
+    padding-top: 60px;
+  }
+}
+
+.logoutContainer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: start;
+}
+
+.logoutButton {
+  background-color: #ffff;
+  color: #005f73;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logoutButton:hover {
+  background: #cccccc;
+}

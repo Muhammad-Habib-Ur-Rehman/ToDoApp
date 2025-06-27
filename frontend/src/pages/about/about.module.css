@@ -1,0 +1,28 @@
+.aboutContainer {
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .title {
+    color: #003366;
+    margin-bottom: 20px;
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  
+  .subTitle {
+    color: #003366;
+    margin-top: 40px;
+    font-size: 2em;
+  }
+  
+  .text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  

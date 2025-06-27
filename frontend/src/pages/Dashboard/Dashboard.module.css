@@ -1,0 +1,223 @@
+.dashboard {
+  max-width: 800px;
+  min-height: 550px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border: none;
+  background: #005f73;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #002244;
+}
+
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taskList li {
+  background: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  padding: 18px 22px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: default;
+}
+
+.taskList li:hover {
+  box-shadow: 0 7px 20px rgba(0, 123, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskTitle {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #005f73;
+}
+
+.priority {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 3px 9px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.description {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  margin-top: 6px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.meta span {
+  user-select: none;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.actions button:hover {
+  filter: brightness(90%);
+}
+
+.actions .completeBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+.actions .incompleteBtn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.actions .editBtn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.actions .deleteBtn {
+  background-color: #dc3545;
+  color: white;
+}
+.dashboard h2{
+  color: #005f73;
+}
+.actions .shareBtn {
+  background-color: #6f42c1;
+  color: white;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 480px) {
+  .taskList li {
+    padding: 15px 12px;
+  }
+  .actions button {
+    font-size: 0.8rem;
+    padding: 7px 8px;
+  }
+}
+
+h2{
+  text-align: center;
+}
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.filters button {
+  margin: 0;
+}
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #005f73;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.searchContainer {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.activeFilter {
+  background-color: #007bff;
+  color: white;
+}
+
+.searchInput {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+.fab:hover {
+  background-color: #014b5a;
+}
+/* in your CSS */
+.dragging {
+  background-color: #e3f2fd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+ 

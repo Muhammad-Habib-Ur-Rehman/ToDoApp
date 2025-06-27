@@ -1,0 +1,65 @@
+.notice-board-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.notice-title {
+  font-size: 26px;
+  color: var(--text, #003366);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.notice-card {
+  background-color: #f0f7ff;
+  border-left: 5px solid #005f73;
+  padding: 18px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notice-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.notice-card h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #005f73;
+}
+
+.notice-card p {
+  font-size: 15px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .notice-board-container {
+    padding: 15px;
+  }
+
+  .notice-title {
+    font-size: 22px;
+  }
+
+  .notice-card h4 {
+    font-size: 16px;
+  }
+
+  .notice-card p {
+    font-size: 13px;
+  }
+}
